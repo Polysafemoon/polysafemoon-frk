@@ -1,15 +1,5 @@
-const Factory = artifacts.require("UniswapV2Factory.sol");
+const Migrations = artifacts.require("Migrations");
 
-module.exports = async function (deployer, _network, addresses) {
-  await deployer.deploy(Factory, addresses[0]);
-  const factory = await Factory.deployed();
-
-  let token1Address, token2Address;
-  if(network === 'mainnet'){
-    token1Addres = ' ';
-    token2Addres = ' ';
-  } else {
-    
-  }
-  await factory.createPair();
+module.exports = function (deployer) {
+  deployer.deploy(Migrations);
 };
