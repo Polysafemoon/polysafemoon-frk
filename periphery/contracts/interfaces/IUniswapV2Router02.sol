@@ -1,8 +1,8 @@
 pragma solidity >=0.6.2;
 
-import './IPancakeRouter01.sol';
+import './IUniswapV2Router01.sol';
 
-interface IPancakeRouter02 is IPancakeRouter01 {
+interface IUniswapV2Router02 is IUniswapV2Router01 {
     function removeLiquidityETHSupportingFeeOnTransferTokens(
         address token,
         uint liquidity,
@@ -21,6 +21,7 @@ interface IPancakeRouter02 is IPancakeRouter01 {
         bool approveMax, uint8 v, bytes32 r, bytes32 s
     ) external returns (uint amountETH);
 
+    /*
     function swapExactTokensForTokensSupportingFeeOnTransferTokens(
         uint amountIn,
         uint amountOutMin,
@@ -41,4 +42,5 @@ interface IPancakeRouter02 is IPancakeRouter01 {
         address to,
         uint deadline
     ) external;
+    */
 }
